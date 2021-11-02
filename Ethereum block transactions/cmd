@@ -1,0 +1,12 @@
+#!/bin/bash 
+
+
+
+FUNC=$1
+
+function sendTx() {
+
+    curl -d '{"privKey":"UNVS5GFG8VSARMVD3TEIPQFBSKP5UCAEAK", "to":"0x2819c144d5946404c0516b6f817a960db37d4929", "amount":1000000000000000000}' -H "Content-Type: application/json" -X POST http://localhost:8080/api/v1/eth/send-eth
+} 
+
+$FUNC
